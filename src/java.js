@@ -1,4 +1,3 @@
-// const header = document.querySelector('h1');
 import Notiflix from 'notiflix';
 
 Notiflix.Notify.init({
@@ -68,8 +67,6 @@ Notiflix.Notify.init({
 });
 
 const button = document.querySelector('button');
-const input = document.querySelector('input');
-const div = document.querySelector('div');
 
 function makeRandomChoice() {
   const random = Math.round(Math.random());
@@ -79,32 +76,28 @@ function makeRandomChoice() {
 let yesTimer = 0;
 let noTimer = 0;
 
-function makeHeaders(value) {
-  if (div.hasChildNodes()) {
-    div.innerHTML = '';
-    yesTimer = 0;
-    noTimer = 0;
-  }
+function makeRandomValues(value) {
+  yesTimer = 0;
+  noTimer = 0;
   for (let i = 0; i < value; i++) {
-    const h2 = document.createElement('h2');
     if (makeRandomChoice() === 1) {
       yesTimer += 1;
     } else {
       noTimer += 1;
     }
-    div.append(h2);
   }
 }
 
 button.addEventListener('click', () => {
-  makeHeaders(100);
-  if (yesTimer > noTimer && yesTimer - noTimer >= 14) {
+  makeRandomValues(100);
+  console.log(yesTimer - noTimer);
+  if (yesTimer > noTimer && yesTimer - noTimer > 9) {
     Notiflix.Notify.success(`Однозначно ТАК`);
-  } else if (yesTimer < noTimer && noTimer - yesTimer >= 14) {
+  } else if (yesTimer < noTimer && noTimer - yesTimer > 9) {
     Notiflix.Notify.failure(`Однозначно НІ`);
-  } else if (yesTimer > noTimer && yesTimer - noTimer < 14) {
+  } else if (yesTimer > noTimer && yesTimer - noTimer < 9) {
     Notiflix.Notify.success(`Скоріше ТАК ніж НІ`);
-  } else if (yesTimer < noTimer && noTimer - yesTimer < 14) {
+  } else if (yesTimer < noTimer && noTimer - yesTimer < 9) {
     Notiflix.Notify.failure(`Скоріше НІ ніж ТАК`);
   } else {
     Notiflix.Notify.info('Не знаю, не знаю, треба подумати ');
