@@ -107,6 +107,6 @@ button.addEventListener('click', () => {
   } else if (yesTimer < noTimer && noTimer - yesTimer < 14) {
     Notiflix.Notify.failure(`Скоріше НІ ніж ТАК`);
   } else {
-    Notiflix.Notify.info('Не знаю, не знаю, треба подумати');
+    Notiflix.Notify.info('Не знаю, не знаю, треба подумати ');
   }
 });
