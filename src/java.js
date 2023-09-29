@@ -1,7 +1,7 @@
 import Notiflix from 'notiflix';
 
 Notiflix.Notify.init({
-  width: '400px',
+  width: '300px',
   position: 'center-top',
   distance: '30px',
   opacity: 1,
