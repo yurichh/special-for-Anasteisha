@@ -6,9 +6,10 @@ h1 {
 }
 
 button {
-  margin-left: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  margin-top: 20%;
   padding: 14px 40px;
   box-shadow: 0 5px 15px 0 rgba(11, 99, 246, 0.7);
   transition: 0.5s;
@@ -34,8 +35,5 @@ button:hover {
   div {
     width: calc(100%-40px);
     font-size: 12px;
-  }
-  button {
-    margin-top: 100%;
   }
 }
