@@ -15,7 +15,7 @@ button {
   font-family: 'Dela Gothic One', cursive;
   font-weight: 700;
   font-size: 72px;
-  background-color: #4caf50; /* зеленый */
+  background-color: #4caf50;
   border: none;
   border-radius: 40px;
   color: aliceblue;
@@ -27,8 +27,13 @@ button:hover {
 }
 
 @media screen and (max-width: 768px) {
+  body {
+    width: 100%;
+    max-width: 768px;
+  }
   div {
-    max-width: 100%;
+    width: calc(100%-40px);
+    font-size: 12px;
   }
   button {
     margin-top: 100%;

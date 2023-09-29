@@ -1,7 +1,7 @@
 import Notiflix from 'notiflix';
 
 Notiflix.Notify.init({
-  width: '700px',
+  width: '400px',
   position: 'center-top',
   distance: '30px',
   opacity: 1,
@@ -19,7 +19,7 @@ Notiflix.Notify.init({
   className: 'notiflix-notify',
   zindex: 4001,
   fontFamily: 'Quicksand',
-  fontSize: '36px',
+  fontSize: '24px',
   cssAnimation: true,
   cssAnimationDuration: 400,
   cssAnimationStyle: 'fade',
@@ -27,7 +27,7 @@ Notiflix.Notify.init({
   useIcon: true,
   useFontAwesome: false,
   fontAwesomeIconStyle: 'basic',
-  fontAwesomeIconSize: '60px',
+  fontAwesomeIconSize: '40px',
   success: {
     background: '#32c682',
     textColor: '#fff',
@@ -100,6 +100,6 @@ button.addEventListener('click', () => {
   } else if (yesTimer < noTimer && noTimer - yesTimer < 9) {
     Notiflix.Notify.failure(`Скоріше НІ ніж ТАК`);
   } else {
-    Notiflix.Notify.info('Не знаю, не знаю, треба подумати ');
+    Notiflix.Notify.info('Не знаю, не знаю, треба подумати');
   }
 });
