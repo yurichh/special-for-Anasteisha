@@ -25,3 +25,12 @@ button:hover {
   transform: translate(-51%, -60%);
   box-shadow: 0 20px 40px 0 rgba(11, 99, 246, 0.3);
 }
+
+@media screen and (max-width: 768px) {
+  div {
+    max-width: 100%;
+  }
+  button {
+    margin-top: 100%;
+  }
+}
